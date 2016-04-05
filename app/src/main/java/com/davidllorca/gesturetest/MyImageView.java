@@ -227,12 +227,12 @@ public class MyImageView extends ImageView {
 
     @Override
     public void onDraw(Canvas canvas) {
-        //super.onDraw(canvas);
         canvas.save();
         canvas.translate(-mPosX, -mPosY);
         canvas.scale(mScaleFactor, mScaleFactor);
         //mImage.draw(canvas);
-        getDrawable().draw(canvas);
+        //getDrawable().draw(canvas);
+        super.onDraw(canvas);
         canvas.restore();
     }
 
